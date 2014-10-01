@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="44012" started-at="2014-10-01T05:15:51Z" finished-at="2014-10-01T05:16:35Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="44012" started-at="2014-10-01T05:15:51Z" finished-at="2014-10-01T05:16:35Z">
+      <class name="myToolsTestNG.SimpleSeleniumTest">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:myToolsTestNG.SimpleSeleniumTest@aaf5002]" name="setUp" is-config="true" duration-ms="4324" started-at="2014-10-01T15:15:51Z" finished-at="2014-10-01T15:15:55Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="test_Browser()[pri:0, instance:myToolsTestNG.SimpleSeleniumTest@aaf5002]" name="test_Browser" duration-ms="32443" started-at="2014-10-01T15:15:55Z" finished-at="2014-10-01T15:16:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Browser -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:myToolsTestNG.SimpleSeleniumTest@aaf5002]" name="closeBrowser" is-config="true" duration-ms="7235" started-at="2014-10-01T15:16:27Z" finished-at="2014-10-01T15:16:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- myToolsTestNG.SimpleSeleniumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
