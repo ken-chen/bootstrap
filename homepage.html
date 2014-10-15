@@ -2,10 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Ken Chen</title>
+<title>KC</title>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 </head>
 <body>
-	
+
+<div  ng-app=""  ng-init="name='Ken';quantity=2;cost=5;firstName='John';lastName='Doe'"  ng-controller="personController">
+ 
+<p>Input something in the input box:</p>
+<p>Name: <input type="text"  ng-model="name" value="John"></p>
+<p  ng-bind="name"></p>
+<p>My first expression: {{5}} + {{5}} =  {{ 5 + 5 }}</p>
+
+
+
+
+
+
+First Name: <input type="text"  ng-model="firstName"><br>
+Last Name: <input type="text"  ng-model="lastName"><br>
+<br>
+Full Name: {{firstName + " " + lastName}}
+
+
+<p>Total in dollar: {{ quantity * cost }}</p>
+<p>Total in dollar2: <span ng-bind="quantity * cost"></span></p>
+<p>The name is {{ firstName + " " + lastName }}</p>
+
+<p>The name2 is <span ng-bind="firstName + ' ' + lastName"></span></p>
+
+
+</div>
+
+<script>
+function personController($scope) {
+    $scope.firstName = "John";
+    $scope.lastName = "Doe";
+}
+
+</script>
+
+
 <h2>Links</h2> 	
 <ul>
 	<li><a href="http://www.google.com/inputtools/try/">Google Online Input Tools</a></li>
