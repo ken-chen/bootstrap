@@ -1,0 +1,89 @@
+
+				<div class="tab-pane" id="tab-accessories">
+	
+					<div class="container-wrapper">
+						<div class="container accessories">
+
+							<div class="accessories-intro">
+								<h1>Why Buy Genuine Holden Accessories?</h1>
+								<p>Holden offer a diverse range of specialised Genuine Holden Accessories, exclusively available from your Holden Dealer. With the all new Commodore make the right choice. Don't jeopardise the practicality, enjoyment or potential resale of your new Commodore by fitting anything other than genuine accessories. Holden Genuine Accessories fit first time every time, so the parts perform as they should and so does your Holden.</p>
+							</div>
+
+							<h1>Personalize your Commodore with Genuine Holden Accessories:</h1> 
+
+							<div id="accessories-app" class="loading-{{isLoading}}" data-model-id='1368089404666' data-ng-controller="AccessoriesCtrl" data-accessory-family-default="Exterior">
+
+									<h2>View by category:</h2>
+
+									<div class="accessories-pdfs">
+										<a target="_blank" href="/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1236980318173&ssbinary=true&blobheader=application/pdf" data-google-tracking="" data-google-tracking-config="{'trigger':'click','category':'','label':'Accessory Brochure','action':'Download'}" >
+											<img src="/resources/images/btn_DAP.gif">
+										</a>
+
+										<a target="_blank" href="/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1236980318173&ssbinary=true&blobheader=application/pdf" data-google-tracking="" data-google-tracking-config="{'trigger':'click','category':'','label':'Accessory Brochure','action':'Download'}" >
+											<img src="/resources/images/btn_DDPP.gif">
+										</a>
+
+										<a target="_blank" href="/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1236980318173&ssbinary=true&blobheader=application/pdf" data-google-tracking="" data-google-tracking-config="{'trigger':'click','category':'','label':'Accessory Brochure','action':'Download'}" >
+											<img src="/resources/images/btn_DCEP.gif">
+										</a>
+									</div>
+
+									<!-- categories -->
+									<ul class="nav nav-tabs unstyled grey-light row nav-categories" id="accessories-packs-tabs">
+										<li data-ng-class="'span' + (24 / vehicleAccessories.categories.length)" data-ng-repeat="category in vehicleAccessories.categories"><a href="#" 
+										class="text-center" 
+										data-ng-click="vehicleAccessories.currentCategory = category;$event.preventDefault()" 
+										data-ng-class="{active: vehicleAccessories.currentCategory === category}">
+										{{category}}<span></span>
+										</a></li>
+									</ul>
+
+									<!-- accessories grid -->
+									<div id="accessories-grid" class="row">
+										<div data-ng-repeat="accessory in vehicleAccessories.currentAccessories">
+											<div data-ng-switch="" on="accessory.expanded">
+												<div data-ng-switch-when="true">
+													<div class="accessory-expanded span24"
+													data-accessory-detail="" data-ng-class="{active: vehicleAccessories.previousDetailRow === vehicleAccessories.currentDetailRow}">
+														<div class="image-wrapper">
+															<div class="image" back-img="{{accessory.thumbnailSource}}"></div>
+														</div>
+														<div class="col-right">
+															<h1>{{accessory.description}}</h1>
+															<div data-ng-switch="" on="vehicleAccessories.displayPrices">
+																<div class="price {{(accessory.price == 0) && 'dealer' || 'rrp' }}" data-ng-switch-when="true">
+																	<div class="rrp-info"><sup>RRP</sup>$ {{accessory.price}}*</div>
+																	<div class="dealer-info">Contact your Holden Dealer</div>
+																</div>
+															</div>
+															<p>{{accessory.longDescription}}</p>
+															<div data-ng-switch="" on="vehicleAccessories.displayPrices">
+																<p class="disclaimer" data-ng-switch-when="true">{{accessory.disclaimer}}</p>
+															</div>
+															<a class="close-detail text-uppercase" href="#" data-ng-click="closeAccessoryDetail();$event.preventDefault()"><i class="icon-hld_28_cross"></i>Close</a>
+														</div>
+													</div>
+												</div>
+												<div data-ng-switch-default>
+													<div class="accessory span6" 
+													data-ng-class="{expanded: accessory === vehicleAccessories.currentAccessory}" 
+													data-accessory-hover="" 
+													data-ng-click="vehicleAccessories.selectAccessory(accessory);vehicleAccessories.currentAccessory = accessory" 
+													data-google-tracking="" data-google-tracking-config="{'trigger':'click','category':'','label':'Accessories Enlarge','action':'{{accessory.description}}'}">
+														<h1>{{accessory.description}}<span></span></h1>
+														<img src="" data-ng-src="{{accessory.thumbnailSource}}" alt="" />
+														<div class="hover">
+															<span>View Details</span>
+														</div>
+														<div class="active"></div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+
+							</div>
+						</div>
+					</div>
+				</div>
